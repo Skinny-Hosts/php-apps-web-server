@@ -23,11 +23,11 @@ ADD /src/ /docker/src
 
 RUN chmod +x /docker/src/server/helpers.sh
 RUN chmod +x /docker/src/server/configurations.sh
-#RUN chmod +x /docker/src/src/laravel-initial-configurations.sh
+RUN chmod +x /docker/src/laravel/laravel-initial-configurations.sh
 
 RUN cd /docker/src/server/ && bash configurations.sh
 
-#ENTRYPOINT ["/docker/src/laravel-initial-configurations.sh"]
+ENTRYPOINT ["/docker/src/laravel/laravel-initial-configurations.sh"]
 
 WORKDIR /var/www/html
 

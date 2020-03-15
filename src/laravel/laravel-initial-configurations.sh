@@ -2,6 +2,7 @@
 
 echo "-- Running composer install";
 
+cd /var/www/html;
 composer install;
 
 CONTAINER_ALREADY_STARTED="CONTAINER_ALREADY_RAN_ONCE"
@@ -23,7 +24,7 @@ if [ ! -e $CONTAINER_ALREADY_STARTED ]; then
     composer dump-autoload;
 
     php artisan migrate
-    php artisan db:seed --class=UsersTableSeeder
+    #php artisan db:seed --class=UsersTableSeeder
 
     chmod a+rw -R /var/www/;
 
