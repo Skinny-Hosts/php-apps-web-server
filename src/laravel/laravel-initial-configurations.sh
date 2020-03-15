@@ -3,6 +3,7 @@
 echo "-- Running composer install";
 
 cd /var/www/html;
+
 composer install;
 
 CONTAINER_ALREADY_STARTED="CONTAINER_ALREADY_RAN_ONCE"
