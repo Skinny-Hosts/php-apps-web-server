@@ -2,7 +2,7 @@
 # Dockerfile para configuração geral do servidor. Ele vai executar alguns comandos iniciais e scripts de instalação do servidor web e php-fpm
 
 FROM ubuntu:18.04
-MAINTAINER Marcos Freitas <marcosvsfreitas@gmail.com>
+LABEL maintainer="marcosvsfreitas@gmail.com"
 
 EXPOSE 80
 EXPOSE 443
