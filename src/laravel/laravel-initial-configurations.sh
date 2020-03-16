@@ -15,7 +15,7 @@ if [ ! -e $CONTAINER_ALREADY_STARTED ]; then
 
     chmod a+rw -R /var/www/;
 
-	cp .env.example .env;
+	# @bug not creating cp .env.example .env;
 
     echo "-- Generating key";
 
