@@ -1,4 +1,4 @@
-# docker-pastelaria-api
+# docker pastelaria api
 Imagem pré-configurada com nginx e php-fpm 7.2 para efeito de testes. Não utilize em produção. 
 
 
