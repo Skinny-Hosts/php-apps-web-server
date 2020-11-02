@@ -4,7 +4,7 @@ server {
 	listen ${NGINX_PORT} default_server;
 	listen [::]:${NGINX_PORT} default_server;
 
-	root /var/www/html/public;
+	root ${NGINX_ROOT};
 
 	server_name ${NGINX_HOST};
 
