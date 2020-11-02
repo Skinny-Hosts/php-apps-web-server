@@ -1,17 +1,18 @@
 #!/usr/bin/env bash
 
-echo "-- Running composer install";
-
 cd /var/www/html;
 
-composer install;
+if [[ -f 'composer.json' ]]; then
+    echo "-- Running composer install";
+    composer install;
+fi;
 
 CONTAINER_ALREADY_STARTED="CONTAINER_ALREADY_RAN_ONCE"
 
-if [ ! -e $CONTAINER_ALREADY_STARTED ]; then
+if [[ ! -e $CONTAINER_ALREADY_STARTED && -f 'artisan' ]]; then
     touch $CONTAINER_ALREADY_STARTED
 
-    echo "-- Container first time for its first time"
+    echo "-- Running this container first its very first time"
 
     chmod a+rw -R /var/www/;
 
@@ -32,9 +33,11 @@ if [ ! -e $CONTAINER_ALREADY_STARTED ]; then
     chmod a+rw -R /var/www/;
 
 else
-    echo "-- Container already run. No need to be reconfigured"
+    echo "-- Container already run, no need to be reconfigured or Laravel is not installed."
 fi
 
-service nginx start && service php7.2-fpm start && /bin/bash
-
 echo "-- Services running";
+
+php-fpm;
+
+service php-fpm status;

@@ -20,7 +20,7 @@ location / {
 
 # pass PHP scripts to FastCGI server
 
-include snippets/php.conf;
+include conf.d/snippets/php.conf;
 
 # if the laravel project is located into a subdirectory
 
@@ -29,7 +29,7 @@ include snippets/php.conf;
 #       try_files $uri $uri/ @sub_directory;
 
 #       location ~ \.php$ {
-#           include snippets/fastcgi-php.conf;
+#           include conf.d/snippets/fastcgi-php.conf;
 #           fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
 #       }
 #   }
