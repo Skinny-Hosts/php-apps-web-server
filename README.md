@@ -6,12 +6,6 @@ Este projeto está equipado com docker-compose, ao clonar você pode executar de
 
 `docker-compose up -d`
 
-A imagem construída do projeto Laravel foi publicada no Docker HUB:
-
-https://hub.docker.com/r/marcosfreitas/skinny-hosts/
-
-[![Docker Build Status](https://img.shields.io/docker/automated/marcosfreitas/skinny-hosts?style=for-the-badge)](https://hub.docker.com/r/marcosfreitas/skinny-hosts/)
-
 # Detalhes dos Containeres
 
 ### NGINX
