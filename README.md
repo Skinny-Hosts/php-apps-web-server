@@ -1,4 +1,4 @@
-# Imagens Alpine com NGINX, PHP-FPM e MySQL para hospedagem Laravel em Docker (Em desenvolvimento)
+# Imagens Alpine com NGINX, PHP-FPM e MySQL para hospedagem Laravel em Docker [Apenas para Testes]
 
 **Os arquivos Laravel devem ser instalados previamente na pasta www.**
 
